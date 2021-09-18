@@ -1,0 +1,19 @@
+.page-body{
+    height: calc(100vh - 62px);
+    width: 100%;
+
+}
+
+.page-body-sidebar{
+    height: calc(100vh - 70px);
+    width: 230px;
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.page-body-content{
+    height: 100%;
+    width: calc(100% - 230px);
+    padding-left: 8px;
+    padding-right: 16px;
+}
+

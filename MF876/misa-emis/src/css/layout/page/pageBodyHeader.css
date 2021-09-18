@@ -1,0 +1,73 @@
+.page-body-header{
+ width: 100%;
+ height: 44px;
+ padding: 0px 0px 12px;   
+}
+.b-header-left{
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.search-tool{
+    height: 100%;
+    width: 482px;
+}
+
+.search-input{
+    height: 100%;
+    padding: 6px 32px 6px 12px;
+    border: 1px solid #e4e6f1;
+    color: #212121;
+    line-height: 44px;
+    border-radius: 4px;
+    font-size: 13px;
+    width: 100%;
+    max-width: 482px;
+}
+
+.search-input::placeholder{
+    font-size: 13px;
+    /* font-weight: 100; */
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.b-header-right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.add-btn{
+    height: 32px;
+    padding: 0px 12px;
+    margin-right: 6px;
+    border-radius: 4px;
+    background-color: #03AE66;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: "OpenSans-Semibold";
+    min-width: 92px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: #02bf70;
+}
+
+.more-tool-btn{
+    cursor: pointer;
+    width: 31px;
+    height: 31px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    background: url("../../../assets/Resource/icon/Mask\ Group\ 7489.svg") no-repeat;
+    background-position: center;
+}
+
+.more-tool-btn:hover{
+    background-color: #EEEE;
+}

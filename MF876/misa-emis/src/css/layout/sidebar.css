@@ -1,0 +1,117 @@
+.sidebar {
+  background-color: #24344b;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.expand {
+  width: 205px;
+}
+
+.collapse {
+  width: 60px;
+}
+
+.sidebar-header {
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+}
+
+.sb-header-logo {
+  padding-left: 12px;
+  align-items: center;
+  height: 100%;
+  width: calc(100% - 50px);
+}
+
+.sb-header-title {
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+  color: #f3f4f6;
+  padding-left: 8px;
+  /* width: 100%; */
+}
+
+.sb-header-icon {
+  background: url("../../assets/Resource/icon/ic_thietbi_56.svg") no-repeat;
+  height: 35px;
+  width: 35px;
+}
+
+.sb-header-menu-icon {
+  background: url("../../assets/Resource/icon/ic_sprites.svg") no-repeat 0px 0px;
+  width: 50px;
+  height: 50px;
+}
+
+.sidebar-menu {
+  height: calc(100vh - 50px);
+  padding-top: 12px;
+}
+
+.sb-menu-item {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  font-size: 13px;
+  color: #b4bac8;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  /* border-color: #15c068; */
+  cursor: pointer;
+}
+
+.sb-menu-item:hover{
+  background-color: #404f64;
+}
+
+.sb-menu-item.active {
+  background-color: #404f64;
+  border-color: #15c068;
+}
+.sb-menu-item-icon {
+  width: 46px;
+  height: 40px;
+}
+
+.sb-menu-item-label {
+  width: 150px;
+  font-weight: 200;
+}
+
+.over-view {
+  background: url("../../assets/Resource/icon/Dashboard.svg") no-repeat;
+  background-position: center;
+}
+
+.device {
+  background: url("../../assets/Resource/icon/ic_ThietBi.svg") no-repeat;
+  background-position: center;
+}
+
+.order{
+    background: url("../../assets/Resource/icon/ic_Mua\ Sam\ \(1\).svg") no-repeat;
+    background-position: center;
+}
+
+.recommend{
+    background: url("../../assets/Resource/icon/Group\ 46042.svg") no-repeat;
+    background-position: center;
+}
+
+.search{
+    background: url("../../assets/Resource/icon/menu_tracuu.svg") no-repeat;
+    background-position: center;
+}
+
+.system{
+    background: url("../../assets/Resource/icon/ic_ThietLap.svg") no-repeat;
+    background-position: center;
+}
+
+.report{
+    background: url("../../assets/Resource/icon/ic_BaoCao.svg")no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,183 @@
+.page-body-table{
+    width: 100%;
+    height: calc(100vh - 158px);
+}
+
+.base-table{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-x: scroll;
+}
+
+tbody{
+    height: 100%;
+    width: 100%;
+    
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0;
+
+}
+
+th{
+    border-bottom: 1px solid #d5d8e6;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+    min-height: 34px !important;
+    height: 34px !important;
+    text-align: left;
+    background-color: #f5f6fa;
+    font-family: "OpenSans-Semibold";
+    color: #000000;
+    font-size: 13px;
+    text-align: center;
+    padding: 0px 8px;
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid #d5d8e6;
+    cursor: pointer;
+    min-width: 130px;
+}
+thead{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    height: 34px;
+    width: 100%;
+    
+}
+
+tr:hover{
+    background-color: #e5f3ff; 
+}
+
+thead tr{
+    background-color: #F5F6FA !important;
+    z-index: 100;
+    width: 100%;
+}
+
+td{
+    border-bottom: 1px solid #d5d8e6;
+    font-family: "OpenSans";
+    color: #404040;
+    font-size: 13px;
+    padding: 0 8px;
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid #d5d8e6;
+    white-space: normal; 
+    min-width: 130px;
+    max-width: 180px;
+    z-index: 10;   
+}
+.text-cell{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 0 8px;
+}
+.col-full-name{
+    color: #0997eb !important;
+    cursor: pointer;
+}
+
+.col-check-box{
+    min-width: 32px !important;
+    width: 32px !important;
+}
+
+.col-check-box input{
+    width: 15px;
+    height: 15px;
+}
+
+.check-icon{
+    width: 100px;
+    height: 40px;
+}
+
+.is-checked{
+    background: url("../../../assets/Resource/icon/ic_check.png") no-repeat;
+    width: 100px;
+    height: 40px;
+    background-position: center;
+}
+
+::-webkit-scrollbar {
+  
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar {
+ 
+    border-radius: 10px;
+    display: block;
+    overflow: auto;
+    height: 8px;
+    width: 8px;
+    background: #ececed;
+}
+::-webkit-scrollbar-thumb {
+    padding-top: 40px !important;
+    background: #AFAFAF;
+    width: 6px;
+    height: 50px;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #b5b5b5;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 20%);
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-track {
+    margin-top: 40px;
+
+    -webkit-box-shadow: inset 0 0 6px rgb(239 239 244);
+    background-color: #ececec;
+}
+
+.even-row{
+    background-color: #f5f6fa;
+}
+
+.tool-col{
+    min-width: 80px !important;
+    border-right: none !important;
+}
+
+.edit-icon{
+    background: url("../../../assets/Resource/icon/ic_Edit.svg") no-repeat;
+    height: 24px;
+    width: 24px;
+    background-position: center;
+    background-size: 24px;
+    cursor: pointer;
+}
+.remove-icon{
+    background: url("../../../assets/Resource/icon/ic_Remove2.svg") no-repeat;
+    height: 24px;
+    width: 24px;
+    background-position: center;
+    background-size: 24px;
+    cursor: pointer;
+}
+
+.remove-icon:hover{
+    background: url("../../../assets/Resource/icon/ic_Remove_Hover.svg") no-repeat;
+}
+
+.tool-table{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}

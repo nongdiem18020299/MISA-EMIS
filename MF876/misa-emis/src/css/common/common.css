@@ -1,0 +1,21 @@
+.d-flex{
+    display: flex;
+}
+
+.flex-left{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.flex-right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.hidden{
+    display: none;
+}

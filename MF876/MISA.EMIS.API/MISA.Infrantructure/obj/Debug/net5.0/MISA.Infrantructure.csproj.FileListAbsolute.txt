@@ -1,0 +1,15 @@
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\bin\Debug\net5.0\MISA.Infrantructure.deps.json
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\bin\Debug\net5.0\MISA.Infrantructure.dll
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\bin\Debug\net5.0\ref\MISA.Infrantructure.dll
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\bin\Debug\net5.0\MISA.Infrantructure.pdb
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.csproj.AssemblyReference.cache
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.AssemblyInfoInputs.cache
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.AssemblyInfo.cs
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.csproj.CoreCompileInputs.cache
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.dll
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\ref\MISA.Infrantructure.dll
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.pdb
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\bin\Debug\net5.0\MISA.Core.dll
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\bin\Debug\net5.0\MISA.Core.pdb
+D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Infrantructure\obj\Debug\net5.0\MISA.Infrantructure.csproj.CopyComplete

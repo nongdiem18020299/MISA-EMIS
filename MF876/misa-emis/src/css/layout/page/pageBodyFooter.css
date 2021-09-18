@@ -1,0 +1,86 @@
+.page-body-footer{
+    width: 100%;
+    height: 52px;
+    /* background-color: bisque; */
+    border-top: 1px solid rgb(224, 224, 224);
+    /* align-items: center; */
+    font-size: 13px;
+}
+
+.b-footer-left{
+    width: 50%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 52px;
+}
+
+.b-footer-right{
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    line-height: 52px;
+    align-items: center;
+}
+
+.select-page{
+    height: 100%;
+    align-items: center;
+}
+
+.icon-first-page{
+    background: url("../../../assets/Resource/icon/ic-\ back-first.svg") no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 30px;
+    /* background-color: aquamarine; */
+}
+
+.icon-prev-page{
+    background: url("../../../assets/Resource/icon/ic_sprites.svg")no-repeat -1007px -29px;
+	width: 8px;
+	height: 12px;
+}
+
+.page-number{
+    width: 100px;
+    margin-left: 12px;
+}
+
+.page-number-input{
+    padding: 6px 12px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 4px;
+}
+
+
+.icon-next-page{
+    background: url("../../../assets/Resource/icon/ic_sprites.svg")no-repeat -1098px -29px;
+	width: 8px;
+	height: 12px;
+}
+
+.icon-last-page{
+    background: url("../../../assets/Resource/icon/ic-\ next-last.svg") no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 100%;
+}
+
+.icon-paging{
+    margin-left: 12px;
+}
+
+.back-btn{
+    /* height: 100%; */
+    font-family: "OpenSans-Semibold";
+    height: 35px;
+    width: 100px;
+    line-height: 35px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 4px;
+    text-align: center;
+}
