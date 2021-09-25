@@ -65,6 +65,21 @@ namespace MISA.EMIS.API.Controllers
                 return StatusCode(500, _employeeService.ErrorException(e));
             }
         }
+
+        [HttpGet("NewEmployeeCode")]
+        public IActionResult GetNewEmployeeCode()
+        {
+            try
+            {
+                var newEmployeeCode = _employeeRepository.GetNewCode();
+                return newEmployeeCode != null ? Ok(newEmployeeCode) : NoContent();
+
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, _employeeService.ErrorException(e));
+            }
+        }
         #endregion
         #region POST
         /// <summary>

@@ -1,21 +1,49 @@
-.d-flex{
-    display: flex;
+.d-flex {
+  display: flex;
 }
 
-.flex-left{
-    display: flex;
-    width: 50%;
-    height: 100%;
-    justify-content: flex-start;
+.flex-left {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-start;
 }
 
-.flex-right{
-    display: flex;
-    width: 50%;
-    height: 100%;
-    justify-content: flex-end;
+.flex-right {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-end;
 }
 
-.hidden{
-    display: none;
+.hidden {
+  display: none;
+}
+
+.checkbox > input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox {
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cccccc;
+  position: relative;
+}
+
+.checkbox:hover {
+  border-color: #02bf70;
+}
+
+.checkmark {
+  border: none !important;
+  background: url("../../assets/Resource/icon/Asset_24.png") no-repeat 0 -54px !important;
+  width: 18px;
+  height: 18px;
 }

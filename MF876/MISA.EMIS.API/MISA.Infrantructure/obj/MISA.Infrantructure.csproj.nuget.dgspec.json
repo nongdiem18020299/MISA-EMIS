@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj": {}
+    "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj": {}
   },
   "projects": {
-    "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj": {
+    "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj",
+        "projectUniqueName": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj",
         "projectName": "MISA.Core",
-        "projectPath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj",
+        "projectPath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Core\\obj\\",
+        "outputPath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj": {
+    "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj",
+        "projectUniqueName": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj",
         "projectName": "MISA.Infrantructure",
-        "projectPath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj",
+        "projectPath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Infrantructure\\obj\\",
+        "outputPath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Infrantructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +92,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj": {
-                "projectPath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj"
+              "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj": {
+                "projectPath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Core\\MISA.Core.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "boCZNFV2IQIjheKSZWNu9sGb0deM+dWvRiZXbVhhkdFskoCGu4fJenyVkDLrnD8zj7XV9xa0weXK93KJKxIrFg==",
+  "dgSpecHash": "I1dnTdT/v9ssqcYb7BjNFAzYOwL9q0t2vpyUc3+6U+2j/T5ZfB42kU1+CigPtwNaLRlwDmgSm6q75Tty1uBL2w==",
   "success": true,
-  "projectFilePath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.EMIS.API\\MISA.EMIS.API.csproj",
+  "projectFilePath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.EMIS.API\\MISA.EMIS.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

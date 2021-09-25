@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9fxM5iPBnfJVZKGSyMf21NYT3wqi/Fbztr7ScoSP0WApvZT8TqGpxHDssS6rWP2PEY9tVMvVmmKJdxeEaU4zdA==",
+  "dgSpecHash": "kxlC3kxWiArzFsq2dM6g1zr3LTKXLe/FztrAchQ42FsJgOmTLz3Tqx1Md6b1c/rG53cl3yVkWxEmyPBhYBtFxg==",
   "success": true,
-  "projectFilePath": "D:\\Khối GD\\MISA_EMIS\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj",
+  "projectFilePath": "D:\\Khối GD\\MISA-EMIS\\MF876\\MISA.EMIS.API\\MISA.Infrantructure\\MISA.Infrantructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

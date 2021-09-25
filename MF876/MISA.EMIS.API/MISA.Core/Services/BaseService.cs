@@ -120,21 +120,14 @@ namespace MISA.Core.Services
             //Kiểm tra id cần xóa có ở trong db không
             if (entity == null)
             {
+                ServiceResult.Success = false;
                 ServiceResult.ErrorCode = MISAConst.MISACodeNoContent;
             }
-            //else
-            //{
-            //    if (_baseValidate.CheckCodeDublicate(entity))
-            //    {
-            //        ServiceResult.UserMsg = Resources.Status_DeleteSuccess;
-            //        ServiceResult.ErrorCode = MISAConst.MISACodeGetSuccess;
-            //        ServiceResult.Data = _baseRepo.Delete(id);
-            //    }
-            //    else
-            //    {
-            //        ServiceResult.ErrorCode = MISAConst.MISACodeNoContent;
-            //    }
-            //}
+            else
+            {
+                ServiceResult.Data = _baseRepo.Delete(id);
+                ServiceResult.UserMsg = Resources.Status_DeleteSuccess;
+            }
             return ServiceResult;
         }
 

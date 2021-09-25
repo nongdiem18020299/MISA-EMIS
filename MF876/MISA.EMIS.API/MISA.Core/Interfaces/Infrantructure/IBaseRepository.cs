@@ -13,5 +13,6 @@ namespace MISA.Core.Interfaces
         public int Delete(Guid entityId);
         public int Put(Entity misaEntity);
         public int Add(Entity misaEntity);
+        public string GetNewCode();
     }
 }

@@ -3,7 +3,7 @@
     <table>
       <thead>
         <tr>
-          <th class="col-check-box"><input type="checkbox" /></th>
+          <th class="col-check-box"><base-checkbox></base-checkbox></th>
           <th>Số hiệu cán bộ</th>
           <th>Họ và tên</th>
           <th>Số điện thoại</th>
@@ -20,9 +20,10 @@
           v-for="(employee, i) in employees"
           :key="i"
           v-bind:class="{ 'even-row': i % 2 != 0 }"
+          @dblclick="openForm(employee)"
         >
           <td class="col-check-box">
-            <div class="check-box-btn"><input type="checkbox" /></div>
+            <div class="check-box-btn"><base-checkbox></base-checkbox></div>
           </td>
           <td>
             <div :title="employee.employeeCode" class="text-cell">
@@ -58,7 +59,7 @@
             <div class="text-cell">
               <div
                 class="check-icon"
-                v-bind:class="{ 'is-checked': employee.trainingStatus == 1 }"
+                v-bind:class="{ 'is-checked': employee.trainingStatus}"
               ></div>
             </div>
           </td>
@@ -66,14 +67,15 @@
             <div class="text-cell">
               <div
                 class="check-icon"
-                v-bind:class="{ 'is-checked': employee.workStatus == 1 }"
+                v-bind:class="{ 'is-checked': employee.workStatus}"
               ></div>
             </div>
           </td>
-          <td class="tool-col ">
-            <div class="tool-table d-flex"><div class="edit-icon"></div>
-            <div class="remove-icon"></div></div>
-            
+          <td class="tool-col">
+            <div class="tool-table d-flex">
+              <div class="edit-icon"></div>
+              <div class="remove-icon" @click="deleteItem(employee)"></div>
+            </div>
           </td>
         </tr>
       </tbody>
@@ -83,77 +85,34 @@
 
 <script>
 import EmployeeApi from "../../../api/components/employee/EmployeeApi.js";
-import DepartmentApi from "../../../api/components/department/DepartmentApi.js";
-import RoomApi from "../../../api/components/room/RoomApi.js";
-import SubjectApi from "../../../api/components/subject/SubjectApi.js";
+import BaseCheckbox from "@/components/base/BaseCheckbox";
 export default {
   name: "PageTable",
+  components: {
+    BaseCheckbox,
+  },
   data() {
     return {
       employees: [],
-      departments: [],
-      rooms: [],
-      subjects: [],
     };
   },
+  props: {
+    departments: [],
+    subjects: [],
+    rooms: [],
+  },
   created() {
-    this.loadRoom();
-    this.loadSubject();
-    this.loadDepartment();
     this.loadData();
   },
   methods: {
-    /**
-     * Hàm load dữ liệu phòng kho
-     * CreateBy: NTDIEM(15/09/2021)
-     */
-    loadRoom() {
-      RoomApi.getAll()
-        .then((res) => {
-          this.rooms = res.data;
-          console.log(res.data);
-        })
-        .catch((res) => {
-          console.log(res);
-        });
-    },
-    /**
-     * Hàm load dữ liệu môn học
-     * CreateBy: NTDIEM(15/09/2021)
-     */
-    loadSubject() {
-      SubjectApi.getAll()
-        .then((res) => {
-          this.subjects = res.data;
-          console.log(res.data);
-        })
-        .catch((res) => {
-          console.log(res);
-        });
-    },
-    /**
-     * Hàm load dữ liệu phòng ban, tổ bộ môn
-     * CreateBy: NTDIEM(15/09/2021)
-     */
-    loadDepartment() {
-      DepartmentApi.getAll()
-        .then((res) => {
-          this.departments = res.data;
-          this.$emit("getDepartment", this.departments);
-          console.log(res);
-        })
-        .catch((res) => {
-          console.log(res);
-        });
-    },
     /**
      * Hàm load dữ liệu nhân viên
      * CreateBy: NTDIEM(15/09/2021)
      */
     loadData() {
+      console.log("getEmployee");
       EmployeeApi.getAll()
         .then((res) => {
-          // this.employees = res.data;
           this.formatData(res.data);
           console.log(res);
         })
@@ -178,8 +137,25 @@ export default {
             employee["subjectName"] = subject["subjectName"];
           }
         }
+
+        if (employee["workStatus"] == 1) {
+          employee["workStatus"] = true;
+        } else {
+          employee["workStatus"] = false;
+        }
+        if (employee["trainingStatus"] == 1) {
+          employee["trainingStatus"] = true;
+        } else {
+          employee["trainingStatus"] = false;
+        }
       }
       this.employees = data;
+    },
+    openForm(employee) {
+      this.$emit("openForm", employee, "put");
+    },
+    deleteItem(employee) {
+      this.$emit("deleteItem", employee);
     },
   },
 };
@@ -187,4 +163,5 @@ export default {
 
 <style scoped>
 @import "../../../css/layout/page/pageBodyTable.css";
+@import "../../../css/common/common.css";
 </style>

@@ -12,3 +12,17 @@ D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\ref\MISA.Core.dl
 D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.pdb
 D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.Resources.resources
 D:\Khối GD\MISA_EMIS\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj.GenerateResource.cache
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\bin\Debug\net5.0\MISA.Core.deps.json
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\bin\Debug\net5.0\MISA.Core.dll
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\bin\Debug\net5.0\ref\MISA.Core.dll
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\bin\Debug\net5.0\MISA.Core.pdb
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj.AssemblyReference.cache
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.Resources.resources
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj.GenerateResource.cache
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.AssemblyInfoInputs.cache
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.AssemblyInfo.cs
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.csproj.CoreCompileInputs.cache
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.dll
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\ref\MISA.Core.dll
+D:\Khối GD\MISA-EMIS\MF876\MISA.EMIS.API\MISA.Core\obj\Debug\net5.0\MISA.Core.pdb

@@ -53,6 +53,17 @@ namespace MISA.Infrantructure
             var entity = DbConnection.QueryFirstOrDefault<Entity>($"Proc_Get{className}ById", parameters, commandType: CommandType.StoredProcedure);
             return entity;
         }
+        /// <summary>
+        /// Lấy Mã mới
+        /// </summary>
+        /// <returns>Mã số mới</returns>
+        /// CreateBy: NTDIEM (24/09/2021)
+        public string GetNewCode()
+        {
+            var className = typeof(Entity).Name;
+            var newCode = DbConnection.QueryFirstOrDefault<string>($"Proc_GetNew{className}Code", commandType: CommandType.StoredProcedure);
+            return newCode;
+        }
         #endregion
         #region DELETE
         /// <summary>

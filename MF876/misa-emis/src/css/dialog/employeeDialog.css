@@ -147,7 +147,10 @@
     height: 32px;
     /* background-color: aliceblue; */
 }
-
+.item-checkbox{
+    min-width: 268px;
+    height: 32px;
+}
 .form-item-label{
     width: 110px;
     white-space: nowrap;
@@ -177,10 +180,9 @@
     border: 1px solid ;
     color: #212121;
     border-color: #CCCCCC;
-}
-
-.form-item-input >input:focus{
-    border-color: #0dd469;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .form-item-left{
@@ -205,10 +207,6 @@
     align-items: center;
 }
 
-.form-item-checkbox>input{
-    width: 15px;
-    height: 15px;
-}
 
 .e-form-footer{
     width: 100%;
