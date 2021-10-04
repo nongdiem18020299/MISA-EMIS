@@ -9,7 +9,7 @@ namespace MISA.Core.Entities
     public class Subject:BaseEntity
     {
         public Guid? SubjectId { get; set; }
-        public string SubjectCode { get; set; }
+        public string Description { get; set; }
         public string SubjectName { get; set; }
     }
 }

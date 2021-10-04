@@ -43,12 +43,16 @@
 }
 
 .page-number{
-    width: 100px;
+    width: 60px;
     margin-left: 12px;
 }
-
+.page-detail span{
+    font-weight: 700;
+    margin-right: 2px;
+    margin-left: 2px;
+}
 .page-number-input{
-    padding: 6px 12px;
+    padding:6px 0px !important;
     text-align: center;
     width: 100%;
     height: 100%;

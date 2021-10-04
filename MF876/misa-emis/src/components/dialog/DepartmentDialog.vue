@@ -4,7 +4,7 @@
       <div class="d-form-header">
         <div class="form-icon-question"></div>
         <div class="form-icon-close" @click="closeForm"></div>
-        <div class="d-form-title">Sửa tổ bộ môn</div>
+        <div class="d-form-title">{{formTitle}}  tổ bộ môn</div>
       </div>
       <div class="d-form-content">
         <div class="form-row d-flex">
@@ -20,7 +20,7 @@
         <div class="form-row01 d-flex">
           <div class="form-item01 d-flex">
             <div class="form-item-label d-flex">Ghi chú</div>
-            <base-input :type="'text'"></base-input>
+            <base-input :type="'text'"  :modelValue.sync="department.description"></base-input>
             <!-- <div class="form-item-input"><input type="text" /></div> -->
           </div>
         </div>
@@ -45,7 +45,20 @@ export default {
     department: {},
     formState: String,
   },
+  data(){
+    return{
+      formTitle:"",
+    }
+  },
   methods: {
+    setFormTitle(){
+      if(this.formState == 'put'){
+        this.formTitle = "Sửa";
+      }
+      else{
+        this.formTitle = "Thêm";
+      }
+    },
     closeForm() {
       this.$emit("closeFormDepartment");
     },
@@ -69,8 +82,12 @@ export default {
             console.log(res);
           });
       }
+      this.closeForm();
     },
   },
+  created(){
+    this.setFormTitle();
+  }
 };
 </script>
 

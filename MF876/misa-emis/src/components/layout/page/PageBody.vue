@@ -1,7 +1,10 @@
 <template>
   <div class="page-body d-flex">
     <div class="page-body-sidebar">
-      <div class="b-sidebar-select d-flex" @click="isDropDidebar=!isDropDidebar">
+      <div
+        class="b-sidebar-select d-flex"
+        @click="isDropDidebar = !isDropDidebar"
+      >
         <div class="b-select-drop-icon"></div>
         <div class="b-select-title">Trường THCS MISA</div>
       </div>
@@ -34,17 +37,15 @@
         >
           <div class="tool-row d-flex" @click="openFormD('put')">
             <div class="tool-edit-icon"></div>
-            <div class="tool-title" >Sửa</div>
+            <div class="tool-title">Sửa</div>
           </div>
-          <div class="tool-row d-flex">
+          <div class="tool-row d-flex" @click="deleteDepartment">
             <div class="tool-delete-icon"></div>
-            <div class="tool-title" @click="deleteDepartment">Xóa</div>
+            <div class="tool-title">Xóa</div>
           </div>
         </div>
       </div>
-      <div class="b-add-department d-flex"
-      @click="openFormD('post')"
-      >
+      <div class="b-add-department d-flex" @click="openFormD('post')">
         <div class="b-add-icon"></div>
         <div class="b-add-department-title">Thêm tổ bộ môn</div>
       </div>
@@ -75,6 +76,7 @@
           :departments="departments"
           :rooms="rooms"
           :subjects="subjects"
+          :employees="employees"
         ></page-table>
       </div>
       <div class="page-body-footer d-flex">
@@ -89,7 +91,7 @@
             <div class="icon-last-page icon-paging"></div>
           </div>
           <div class="page-detail flex-left">
-            <b>1/3</b> trang (<b>138</b> bản ghi)
+            <span>1/3</span>trang (<span> 138 </span> bản ghi)
           </div>
         </div>
         <div class="b-footer-right flex-right">
@@ -101,56 +103,58 @@
 </template>
 
 <script>
-import EmployeeApi from "../../../api/components/employee/EmployeeApi";
+// import EmployeeApi from "../../../api/components/employee/EmployeeApi";
 import PageTable from "./PageTable.vue";
 export default {
   components: { PageTable },
   name: "PageBody",
   data() {
     return {
-      newEmployeeCode: "",
       employee: {},
       itemHover: null,
       openOption: false,
       itemSelected: null,
       department: {},
-      isDropDidebar: false,
+      isDropDidebar: true,
     };
   },
   props: {
     departments: [],
     rooms: [],
     subjects: [],
+    employees: [],
+    newEmployeeCode:String,
   },
   created() {
-    this.getNewEmployeeCode();
+   
   },
   methods: {
     openForm(employee, formState) {
-      if (!employee["employeeCode"]) {
-        employee["employeeCode"] = this.newEmployeeCode;
+      let saveEmployee = employee;
+      if (formState == "post") {
+        saveEmployee = {};
+        saveEmployee["employeeCode"] = this.newEmployeeCode;
+        saveEmployee["roomNameList"] = [];
+        saveEmployee["subjectNameList"] = [];
+        saveEmployee["workStatus"] = true;
+        saveEmployee["dayOff"] = new Date();
       }
-      this.$emit("openForm", employee, formState);
+      this.$emit("openForm", saveEmployee, formState);
     },
     openFormD(formState) {
-      this.$emit("openFormD", this.department, formState);
+      let saveDepartment = this.department;
+      if (formState == "post") {
+        saveDepartment = {};
+      }
+      this.$emit("openFormD", saveDepartment, formState);
       this.openOption = false;
     },
-    getNewEmployeeCode() {
-      EmployeeApi.getFilter("NewEmployeeCode")
-        .then((res) => {
-          this.newEmployeeCode = res.data;
-          console.log(res.data);
-        })
-        .catch((res) => {
-          console.log(res.data);
-        });
-    },
-    deleteDepartment(){
-      this.$emit("deleteItem", this.department, 'department');
+
+    deleteDepartment() {
+      this.$emit("deleteItem", this.department, "department");
     },
     deleteItem(employee) {
-      this.$emit("deleteItem", employee, 'employee');
+      this.$emit("deleteItem", employee, "employee");
     },
     closeSidebarTool() {
       if (this.openOption && this.itemSelected != this.itemHover) {

@@ -1,26 +1,132 @@
-.item-checkbox{
-    display: flex;
-    width: 32px;
-    height: 32px;
-    justify-content: center;
-    align-items: center;
+.drop-item-checkbox {
+  display: flex;
+  width: 32px !important;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
 }
 
-.item-checkbox>input{
-    width: 15px;
-    height: 15px;
+.drop-item-checkbox>input {
+  width: 15px;
+  height: 15px;
 }
 
-.list-item-content{
-    width: calc(100% - 32px);
-    height: 100%;
-    color: #212121;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    list-style: none;
-    font-family: "OpenSans";
-    font-size: 13px;
-    height: 32px;
-    line-height: 32px;
+.list-item-input {
+  font-family: "OpenSans";
+  width: 100%;
+  height: 100%;
+  padding: 6px 2px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.list-item-input>input {
+  height: 100%;
+  width: 100%;
+  padding-right: 50px;
+}
+
+.onFocus {
+  border-color: #0dd469 !important;
+}
+
+.form-multi-select {
+  height: 32px;
+  width: 100%;
+  border: 1px solid;
+  color: #212121;
+  font-size: 13px;
+  border-radius: 4px;
+  border-color: #cccccc;
+}
+
+.list-item-content {
+  width: calc(100% - 32px);
+  height: 100%;
+  color: #212121;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  list-style: none;
+  font-family: "OpenSans";
+  font-size: 13px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.select-list>li {
+  justify-content: flex-start;
+  width: 100%;
+  cursor: pointer;
+}
+
+.list-item-selected {
+  width: auto;
+  height: 32px;
+  padding-left: 6px;
+  font-family: "OpenSans";
+  font-size: 13px;
+  align-items: center;
+}
+
+.item-selected {
+  max-width: 120px;
+  height: 24px;
+  /* background-color: aqua; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* line-height: 24px; */
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #dfdfdf;
+  color: #000;
+  margin-right: 4px;
+  position: relative;
+  padding-right: 20px;
+}
+
+.clear-select {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  float: right;
+  margin: 4px 0px 0 0px;
+  background-image: url("../../assets/Resource/icon/ic_x.png");
+  background-position: -4px -7px;
+}
+
+.clear-select:hover {
+  background-image: url("../../assets/Resource/icon/ic-X.svg");
+  top: 0;
+  background-position: 0 0px;
+}
+
+.amount-selected {
+  width: 20px;
+  height: 20px;
+  background: #03ae66;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.dot {
+  height: 20px;
+  line-height: 20px;
+}
+
+.count-item {
+  position: absolute;
+  top: 6px;
+  right: 30px;
+  align-items: center;
 }

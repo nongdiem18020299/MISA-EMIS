@@ -3,14 +3,18 @@
     <table>
       <thead>
         <tr>
-          <th class="col-check-box"><base-checkbox></base-checkbox></th>
+          <th class="col-check-box th-checkbox">
+            <div class="check-box-btn">
+              <base-checkbox :ref="'checkAll'"></base-checkbox>
+            </div>
+          </th>
           <th>Số hiệu cán bộ</th>
           <th>Họ và tên</th>
           <th>Số điện thoại</th>
           <th>Tổ bộ môn</th>
           <th>Môn dạy</th>
-          <th>QL kho, phòng</th>
-          <th>Đào tạo QLTB</th>
+          <th title="Quản lý kho phòng">QL kho, phòng</th>
+          <th title="Đào tạo quản lý thiết bị">Đào tạo QLTB</th>
           <th>Đang làm việc</th>
           <th class="tool-col"><div class="tool-col"></div></th>
         </tr>
@@ -23,7 +27,9 @@
           @dblclick="openForm(employee)"
         >
           <td class="col-check-box">
-            <div class="check-box-btn"><base-checkbox></base-checkbox></div>
+            <div class="check-box-btn">
+              <base-checkbox :ref="`checkboxItem${i}`"></base-checkbox>
+            </div>
           </td>
           <td>
             <div :title="employee.employeeCode" class="text-cell">
@@ -46,20 +52,20 @@
             </div>
           </td>
           <td>
-            <div :title="employee.subjectName" class="text-cell">
-              {{ employee.subjectName }}
+            <div :title="employee.subjectNameList.join(', ')" class="text-cell">
+              {{ employee.subjectNameList.join(', ') }}
             </div>
           </td>
           <td>
-            <div :title="employee.roomName" class="text-cell">
-              {{ employee.roomName }}
+            <div :title="employee.roomNameList.join(', ')" class="text-cell">
+              {{ employee.roomNameList.join(', ') }}
             </div>
           </td>
           <td>
             <div class="text-cell">
               <div
                 class="check-icon"
-                v-bind:class="{ 'is-checked': employee.trainingStatus}"
+                v-bind:class="{ 'is-checked': employee.trainingStatus }"
               ></div>
             </div>
           </td>
@@ -67,13 +73,13 @@
             <div class="text-cell">
               <div
                 class="check-icon"
-                v-bind:class="{ 'is-checked': employee.workStatus}"
+                v-bind:class="{ 'is-checked': employee.workStatus }"
               ></div>
             </div>
           </td>
           <td class="tool-col">
             <div class="tool-table d-flex">
-              <div class="edit-icon"></div>
+              <div class="edit-icon" @click="openForm(employee)"></div>
               <div class="remove-icon" @click="deleteItem(employee)"></div>
             </div>
           </td>
@@ -84,7 +90,6 @@
 </template>
 
 <script>
-import EmployeeApi from "../../../api/components/employee/EmployeeApi.js";
 import BaseCheckbox from "@/components/base/BaseCheckbox";
 export default {
   name: "PageTable",
@@ -93,64 +98,17 @@ export default {
   },
   data() {
     return {
-      employees: [],
+      selectEmployee: [],
     };
   },
   props: {
     departments: [],
     subjects: [],
     rooms: [],
+    employees: [],
   },
-  created() {
-    this.loadData();
-  },
+  created() {},
   methods: {
-    /**
-     * Hàm load dữ liệu nhân viên
-     * CreateBy: NTDIEM(15/09/2021)
-     */
-    loadData() {
-      console.log("getEmployee");
-      EmployeeApi.getAll()
-        .then((res) => {
-          this.formatData(res.data);
-          console.log(res);
-        })
-        .catch((res) => {
-          console.log(res);
-        });
-    },
-    formatData(data) {
-      for (var employee of data) {
-        for (var department of this.departments) {
-          if (employee["departmentId"] == department["departmentId"]) {
-            employee["departmentName"] = department["departmentName"];
-          }
-        }
-        for (var room of this.rooms) {
-          if (employee["roomId"] == room["roomId"]) {
-            employee["roomName"] = room["roomName"];
-          }
-        }
-        for (var subject of this.subjects) {
-          if (employee["subjectId"] == subject["subjectId"]) {
-            employee["subjectName"] = subject["subjectName"];
-          }
-        }
-
-        if (employee["workStatus"] == 1) {
-          employee["workStatus"] = true;
-        } else {
-          employee["workStatus"] = false;
-        }
-        if (employee["trainingStatus"] == 1) {
-          employee["trainingStatus"] = true;
-        } else {
-          employee["trainingStatus"] = false;
-        }
-      }
-      this.employees = data;
-    },
     openForm(employee) {
       this.$emit("openForm", employee, "put");
     },

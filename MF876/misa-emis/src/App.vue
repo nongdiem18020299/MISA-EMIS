@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="d-flex">
-    <sidebar></sidebar>
-    <employee-page></employee-page>
+    <sidebar @sidebarCollapse="openSidebar"></sidebar>
+    <employee-page  v-bind:class="{'wideBody' : isSidebarCollapse}"></employee-page>
   </div>
 </template>
 
@@ -14,6 +14,16 @@ export default {
   components: {
     Sidebar,
     EmployeePage,
+  },
+  data() {
+    return {
+       isSidebarCollapse: true,
+    }
+  },
+  methods:{
+    openSidebar(isWide){
+      this.isSidebarCollapse = !isWide;
+    },
   }
 }
 </script>

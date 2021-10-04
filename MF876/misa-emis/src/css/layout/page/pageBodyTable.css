@@ -10,19 +10,19 @@
     overflow-x: scroll;
 }
 
-tbody{
+.base-table tbody{
     height: 100%;
     width: 100%;
     
 }
 
-table{
+.base-table table{
     border-collapse: separate;
     border-spacing: 0;
 
 }
 
-th{
+.base-table th{
     border-bottom: 1px solid #d5d8e6;
     position: sticky;
     top: 0;
@@ -42,7 +42,7 @@ th{
     cursor: pointer;
     min-width: 130px;
 }
-thead{
+.base-table thead{
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
@@ -51,17 +51,17 @@ thead{
     
 }
 
-tr:hover{
+.base-table tr:hover{
     background-color: #e5f3ff; 
 }
 
-thead tr{
+.base-table thead tr{
     background-color: #F5F6FA !important;
-    z-index: 100;
+    z-index: 50;
     width: 100%;
 }
 
-td{
+.base-table td{
     border-bottom: 1px solid #d5d8e6;
     font-family: "OpenSans";
     color: #404040;
@@ -74,6 +74,9 @@ td{
     min-width: 130px;
     max-width: 180px;
     z-index: 10;   
+}
+.th-checkbox{
+    z-index: 51;
 }
 .text-cell{
     white-space: nowrap;

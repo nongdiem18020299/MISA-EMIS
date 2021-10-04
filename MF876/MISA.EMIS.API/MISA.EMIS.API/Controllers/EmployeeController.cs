@@ -66,6 +66,11 @@ namespace MISA.EMIS.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Lấy mã nhân viên mới
+        /// </summary>
+        /// <returns>Mã nhân viên mới</returns>
+        /// CreateBy: NTDIEM(20/09/2021)
         [HttpGet("NewEmployeeCode")]
         public IActionResult GetNewEmployeeCode()
         {
@@ -76,6 +81,27 @@ namespace MISA.EMIS.API.Controllers
 
             }
             catch (Exception e)
+            {
+                return StatusCode(500, _employeeService.ErrorException(e));
+            }
+        }
+
+        /// <summary>
+        /// Lọc nhân viên
+        /// </summary>
+        /// <param name="DepartmentId">id tổ bộ môn</param>
+        /// <param name="employeeFilter"></param>
+        /// <returns>Dữ liệu nhân viên sau khi lọc</returns>
+        /// CreateBy: NTDIEM(20/09/2021)
+        [HttpGet("EmployeeFilter")]
+        public IActionResult GetEmployeeFilter(Guid DepartmentId, string employeeFilter)
+        {
+            try
+            {
+                var res = _employeeRepository.GetEmployeeFilter(DepartmentId, employeeFilter);
+                return res != null ? Ok(res) : NoContent();
+            }
+            catch(Exception e)
             {
                 return StatusCode(500, _employeeService.ErrorException(e));
             }

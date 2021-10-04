@@ -11,7 +11,18 @@
 
 .search-tool{
     height: 100%;
-    width: 482px;
+    width: 400px;
+    position: relative;
+}
+
+.icon-search{
+    cursor: pointer;
+    height: 32px;
+    position: absolute;
+    width: 32px;
+    right: 0px;
+    top: 0px;
+    background: url("../../../assets/Resource/icon/ic_search.svg") no-repeat 3px 4px;
 }
 
 .search-input{

@@ -89,7 +89,7 @@
 .sidebar-tool{
     position: absolute;
     left: 204px;
-    z-index: 20;
+    z-index: 60;
     width: 95px;
     border: 1px solid ;
     color: #212121;

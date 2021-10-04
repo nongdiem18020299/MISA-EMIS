@@ -9,5 +9,6 @@ namespace MISA.Core.Interfaces
 {
     public interface IEmployeeRepository:IBaseRepository<Employee>
     {
+        public object GetEmployeeFilter(Guid DepartmentId, string employeeFilter);
     }
 }

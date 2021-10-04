@@ -44,6 +44,7 @@
   background: url("../../assets/Resource/icon/ic_sprites.svg") no-repeat 0px 0px;
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .sidebar-menu {
@@ -59,11 +60,13 @@
   color: #b4bac8;
   border-width: 0 0 0 4px;
   border-style: solid;
-  /* border-color: #15c068; */
+  border-color: #24344b;
   cursor: pointer;
 }
-
-.sb-menu-item:hover{
+.sb-menu-selected {
+  border-color: #15c068;
+}
+.sb-menu-item:hover {
   background-color: #404f64;
 }
 
@@ -91,27 +94,27 @@
   background-position: center;
 }
 
-.order{
-    background: url("../../assets/Resource/icon/ic_Mua\ Sam\ \(1\).svg") no-repeat;
-    background-position: center;
+.order {
+  background: url("../../assets/Resource/icon/ic_Mua\ Sam\ \(1\).svg") no-repeat;
+  background-position: center;
 }
 
-.recommend{
-    background: url("../../assets/Resource/icon/Group\ 46042.svg") no-repeat;
-    background-position: center;
+.recommend {
+  background: url("../../assets/Resource/icon/Group\ 46042.svg") no-repeat;
+  background-position: center;
 }
 
-.search{
-    background: url("../../assets/Resource/icon/menu_tracuu.svg") no-repeat;
-    background-position: center;
+.search {
+  background: url("../../assets/Resource/icon/menu_tracuu.svg") no-repeat;
+  background-position: center;
 }
 
-.system{
-    background: url("../../assets/Resource/icon/ic_ThietLap.svg") no-repeat;
-    background-position: center;
+.system {
+  background: url("../../assets/Resource/icon/ic_ThietLap.svg") no-repeat;
+  background-position: center;
 }
 
-.report{
-    background: url("../../assets/Resource/icon/ic_BaoCao.svg")no-repeat;
-    background-position: center;
+.report {
+  background: url("../../assets/Resource/icon/ic_BaoCao.svg") no-repeat;
+  background-position: center;
 }

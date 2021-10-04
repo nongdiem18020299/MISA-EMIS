@@ -9,7 +9,7 @@ namespace MISA.Core.Entities
     public class Room:BaseEntity
     {
         public Guid? RoomId { get; set; }
-        public string RoomCode { get; set; }
+        public string Description { get; set; }
         public string RoomName { get; set; }
     }
 }

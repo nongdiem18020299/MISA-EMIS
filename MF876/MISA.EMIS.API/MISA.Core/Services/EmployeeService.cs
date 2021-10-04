@@ -23,5 +23,7 @@ namespace MISA.Core.Services
             _baseRepo = baseRepo;
         }
         #endregion
+
+
     }
 }

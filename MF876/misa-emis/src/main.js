@@ -2,9 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 
+import { VTooltip, VPopover, VClosePopover } from 'v-tooltip'
 
-
-Vue.config.productionTip = false
+Vue.directive('tooltip', VTooltip)
+Vue.directive('close-popover', VClosePopover)
+Vue.component('v-popover', VPopover)
 new Vue({
   vuetify,
   render: h => h(App)

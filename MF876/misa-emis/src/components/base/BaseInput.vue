@@ -5,6 +5,7 @@
         :value="modelValue"
         @input="updateInput"
         @focus="onFocus=true"
+        v-bind:class="{'border-red' : failState}"
     />
   </div>
 </template>
@@ -21,10 +22,16 @@ export default {
       type: String,
       default: "text",
     },
+    isRequired: Boolean,
+    isEmail: Boolean,
+    isPhoneNumber: Boolean,
+    inputName: String,
+   
   },
   data() {
     return {
       onFocus: false,
+       failState: false,
     };
   },
   methods: {

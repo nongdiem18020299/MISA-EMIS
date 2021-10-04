@@ -14,8 +14,8 @@ namespace MISA.Infrantructure
     public class BaseRepository<Entity>:IBaseRepository<Entity> where Entity:class
     {
         #region Fields
-        IDbConnection DbConnection;
-        IConfiguration _configuration;
+        public IDbConnection DbConnection;
+        public IConfiguration _configuration;
         #endregion
 
         #region Constructure

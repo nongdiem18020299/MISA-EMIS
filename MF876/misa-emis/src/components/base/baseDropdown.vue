@@ -1,21 +1,21 @@
 <template>
   <div class="form-dropdown">
     <div class="form-item-input">
-      <input :type="type" :value="modelValue" @input="updateInput"/>
+      <input :type="type" v-model="selectedItem" />
     </div>
     <div
-    @click="openSelectList"
-    v-bind:class="[{'dropdown-icon-rotage':isDrop}, 'dropdown-icon']"
+      @click="openSelectList"
+      v-bind:class="[{ 'dropdown-icon-rotage': isDrop }, 'dropdown-icon']"
     ></div>
-    <ul class="select-list" v-if="isDrop">
-      <li v-for="(item, i) in selectList" :key="i"
-      @click="selectItem(item)">{{item[nameDrop+"Name"]}}</li>
+    <ul class="select-list" v-if="isDrop"  v-click-outside="closeSelectList">
+      <li v-for="(item, i) in selectList" :key="i" @click="selectItem(item)">
+        {{ item[nameDrop + "Name"] }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "BaseDropdown",
   props: {
@@ -29,31 +29,40 @@ export default {
       default: "text",
     },
     selectList: [],
-    nameDrop:String,
+    nameDrop: String,
   },
   data() {
-   return {
-      isDrop:false,
-    }    
+    return {
+      isDrop: false,
+      selectedItem: "",
+    };
   },
   methods: {
-    updateInput(event) {
-      this.$emit("update:modelValue", event.target.value);
-    },
-    openSelectList(){
-        if(this.isDrop){
-            this.isDrop = false;
-        }else{
-            this.isDrop = true;
-        }
-    },
-    selectItem(item){
-        this.modelValue = item[this.nameDrop+"Name"];
+    openSelectList() {
+      if (this.isDrop) {
         this.isDrop = false;
+      } else {
+        this.isDrop = true;
+      }
+    },
+    selectItem(item) {
+      this.selectedItem = item[this.nameDrop + "Name"];
+      this.isDrop = false;
+    },
+    closeSelectList(){
+      if(this.isDrop){
+        this.isDrop = false;
+      }
     }
   },
-  created(){
-  }
+  created() {
+    this.selectedItem = this.modelValue;
+  },
+  watch: {
+    selectedItem() {
+      this.$emit("update:modelValue", this.selectedItem);
+    },
+  },
 };
 </script>
 <style scoped>

@@ -14,7 +14,7 @@ namespace MISA.Core.Services
     {
         #region Field
         public ServiceResult ServiceResult;
-        IBaseRepository<Entity> _baseRepo;
+        public IBaseRepository<Entity> _baseRepo;
         #endregion
         #region Constructor
         public BaseService(IBaseRepository<Entity> baseRepo)
@@ -35,7 +35,7 @@ namespace MISA.Core.Services
         {
             //Kiểm tra mã có bị trống không?
             var className = typeof(Entity).Name;
-            var entityCode = entity.GetType().GetProperty($"{className}Code").GetValue(entity, null).ToString();
+            //var entityCode = entity.GetType().GetProperty($"{className}Code").GetValue(entity, null).ToString();
             //Kiểm tra các trường bắt buộc có bị trống không?
             //if (!CheckNullRequired(entity).Success)
             //{
@@ -77,7 +77,7 @@ namespace MISA.Core.Services
         public ServiceResult Put(Entity entity, Guid id)
         {
             var className = typeof(Entity).Name;
-            var entityCode = entity.GetType().GetProperty($"{className}Code").GetValue(entity, null).ToString();
+            //var entityCode = entity.GetType().GetProperty($"{className}Code").GetValue(entity, null).ToString();
             //Kiểm tra các trường bắt buộc có bị trống không?
             //if (!CheckNullRequired(entity).Success)
             //{

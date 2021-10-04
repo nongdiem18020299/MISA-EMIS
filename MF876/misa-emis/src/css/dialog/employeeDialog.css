@@ -1,16 +1,16 @@
-.employee-dialog{
+.employee-dialog {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.15);
-    z-index: 100;
+    z-index: 110;
     align-items: center;
     justify-content: center;
 }
 
-.employee-form{
+.employee-form {
     width: 900px;
     height: auto;
     display: block;
@@ -28,52 +28,57 @@
     position: relative;
 }
 
-.e-form-content{
+.e-form-content {
     width: 100%;
     height: 275px;
     /* background-color: #333; */
 }
-.e-form-img-container{
+
+.e-form-img-container {
     width: 183px;
     height: 270px;
     border-right: 1px solid #e0e0e0;
-   
 }
 
-.select-img{
+.select-img {
     width: 153px;
     height: 100%;
     position: relative;
 }
-.select-img-container{
+
+.select-img-container {
     width: 100%;
     height: 160px;
     cursor: pointer;
     position: relative;
+    /* z-index: 200; */
 }
-.select-img-container:hover{
+
+.select-img-container:hover {
     border-top: 1px solid #03a366;
     border-left: 1px solid #03a366;
     border-right: 1px solid #03a366;
 }
-.select-img-icon{    
+
+.select-img-icon {
     background: url("../../assets/Resource/icon/avt.svg");
+    background-size: cover;
     width: 100%;
-    height: 160px;
+    height: 156px;
     z-index: 99;
 }
 
-.img-input{
+.img-input {
     width: 100%;
     height: 160px;
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 0px;
     opacity: 0;
     z-index: 99;
 }
 
-.img-btn{
+.img-btn {
     padding: 0px 12px;
     font-family: "OpenSans-Semibold";
     font-weight: 700;
@@ -93,10 +98,11 @@
     z-index: 200;
 }
 
-.img-btn:hover{
+.img-btn:hover {
     background-color: #02bf70;
 }
-.label-info{
+
+.label-info {
     width: 100%;
     height: auto;
     position: absolute;
@@ -104,24 +110,24 @@
     left: 0;
 }
 
-.label-name{
+.label-name {
     width: 100%;
     text-align: center;
     font-family: "OpenSans-Semibold";
 }
 
-.label-code{
+.label-code {
     width: 100%;
     text-align: center;
 }
 
-.e-form-detail{
+.e-form-detail {
     width: calc(100% - 183px);
     height: 100%;
     padding-left: 25px;
 }
 
-.form-detail-title{
+.form-detail-title {
     font-size: 16px;
     font-family: "OpenSans-Semibold";
     margin: 0;
@@ -130,28 +136,30 @@
     margin-bottom: 30px;
 }
 
-.user-info{
+.user-info {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.form-row{
+.form-row {
     height: auto;
     padding-bottom: 12px;
 }
 
-.form-item{
+.form-item {
     width: 100%;
     height: 32px;
     /* background-color: aliceblue; */
 }
-.item-checkbox{
+
+.item-checkbox {
     min-width: 268px;
     height: 32px;
 }
-.form-item-label{
+
+.form-item-label {
     width: 110px;
     white-space: nowrap;
     height: 100%;
@@ -162,22 +170,24 @@
     font-family: "OpenSans";
 }
 
-.form-item-label >span{
+.form-item-label>span {
     color: #fa3939;
     padding-left: 4px;
 }
 
-.form-item-input{
+.form-item-input {
     width: calc(100% - 110px);
+    position: relative;
 }
-.form-item-input >input{
+
+.form-item-input>input {
     font-family: "OpenSans";
     width: 100%;
     height: 100%;
     padding: 6px 12px;
     font-size: 13px;
     border-radius: 4px;
-    border: 1px solid ;
+    border: 1px solid;
     color: #212121;
     border-color: #CCCCCC;
     text-overflow: ellipsis;
@@ -185,11 +195,15 @@
     overflow: hidden;
 }
 
-.form-item-left{
+.border-red {
+    border-color: #fa3939 !important;
+}
+
+.form-item-left {
     padding-left: 25px;
 }
 
-.form-checkbox-label{
+.form-checkbox-label {
     white-space: nowrap;
     height: 100%;
     align-items: center;
@@ -200,15 +214,14 @@
     margin-right: 12px;
 }
 
-.form-item-checkbox{
+.form-item-checkbox {
     width: 32px;
     height: 32px;
     justify-content: center;
     align-items: center;
 }
 
-
-.e-form-footer{
+.e-form-footer {
     width: 100%;
     height: calc(100% - 275px);
     padding: 0;
@@ -218,7 +231,7 @@
     align-items: flex-end;
 }
 
-.form-footer-btn{
+.form-footer-btn {
     width: 100px;
     height: 32px;
     border-radius: 4px;
@@ -230,41 +243,48 @@
     cursor: pointer;
 }
 
-.close-btn{
-    border: 1px solid ;
+.close-btn {
+    border: 1px solid;
     color: #212121;
     border-color: #CCCCCC;
-
 }
 
-.close-btn:hover{
+.close-btn:hover {
     background-color: #EEEE;
 }
 
-.save-btn{
+.save-btn {
     background-color: #03a366;
     color: #fff;
     margin-left: 12px;
 }
 
-.save-btn:hover{
+.save-btn:hover {
     background-color: #02bf70;
 }
 
-.form-icon-question{
+.close-btn:focus {
+    background-color: #EEEE;
+}
+
+.save-btn {
+    background-color: #02bf70;
+}
+
+.form-icon-question {
     position: absolute;
     top: 12px;
     right: 35px;
     background: url('../../assets/Resource/icon/css_sprites.png') no-repeat -82px -372px;
-	width: 16px;
-	height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
-.form-icon-close{
+.form-icon-close {
     position: absolute;
     top: 12px;
     right: 12px;
     background: url('../../assets/Resource/icon/css_sprites.png') no-repeat -190px -372px;
-	width: 16px;
-	height: 16px;
+    width: 16px;
+    height: 16px;
 }
